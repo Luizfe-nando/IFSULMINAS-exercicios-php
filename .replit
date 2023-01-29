@@ -1,0 +1,3 @@
+run = ["php", "exercicio5.php"]
+
+entrypoint = "exercicio5.php"
