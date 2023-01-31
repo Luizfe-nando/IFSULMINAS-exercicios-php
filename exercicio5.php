@@ -14,12 +14,12 @@ Para um sistema mais completo, para idades abaixo de 16 anos, informe que não p
 $idade = (int) readline("Informe sua idade: ");
 //echo "\nDigite B se for alfabetizado ou A se for analfabeto\n\n";
 //$letra = fgets(STDIN);
-$alfabetizado = readline("Informe se é alfabetizado (B) ou analfabeto (A): ");
+$alfabetizado = readline("\n\nInforme se é alfabetizado (B) ou analfabeto (A): ");
 
 $idade_minima = 16;
 
-$menor = ($idade < $idade_minima) ? "\nVocê Não pode votar" : "";
-$facultativo = $idade >= $idade_minima && $idade < 18 || $alfabetizado == "A" || $idade > 70 ? "\nseu voto é facultativo" : "\nSeu voto é obrigatorio";
-echo $menor, $facultativo;
+$menor = $idade < $idade_minima  ? "\nVocê Não pode votar" : (
+$idade >= $idade_minima && $idade < 18 || $alfabetizado == "A" || $idade > 70 ? "\nseu voto é facultativo" : "\nSeu voto é obrigatorio");
+echo $menor;
 
 ?>
